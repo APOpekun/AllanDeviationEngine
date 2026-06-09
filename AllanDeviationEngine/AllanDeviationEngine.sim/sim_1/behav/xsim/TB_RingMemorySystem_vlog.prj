@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../AllanDeviationEngine.srcs/sources_1/new/RingMemory.sv" \
+"../../../../AllanDeviationEngine.srcs/sim_1/new/TB_RingMemorySystem.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
