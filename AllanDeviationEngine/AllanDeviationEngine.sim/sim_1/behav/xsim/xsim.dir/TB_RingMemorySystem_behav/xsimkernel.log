@@ -1,7 +1,7 @@
-Running: xsim.dir/TB_RingMemorySystem_behav/xsimk.exe -simmode gui -wdb TB_RingMemorySystem_behav.wdb -simrunnum 0 -socket 60141
+Running: xsim.dir/TB_RingMemorySystem_behav/xsimk.exe -simmode gui -wdb TB_RingMemorySystem_behav.wdb -simrunnum 0 -socket 51456
 Design successfully loaded
-Design Loading Memory Usage: 28968 KB (Peak: 28968 KB)
-Design Loading CPU Usage: 452 ms
+Design Loading Memory Usage: 28824 KB (Peak: 28824 KB)
+Design Loading CPU Usage: 421 ms
 Simulation completed
-Simulation Memory Usage: 29744 KB (Peak: 29744 KB)
-Simulation CPU Usage: 468 ms
+Simulation Memory Usage: 30636 KB (Peak: 30636 KB)
+Simulation CPU Usage: 436 ms

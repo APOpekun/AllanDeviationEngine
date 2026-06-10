@@ -48,7 +48,7 @@ module TB_RingMemorySystem();
         .ParValid(ParValid)
     );
     //clock gen: 100 MHz
-    initial clk = 0;
+    initial clk = 1;
     always #5 clk = ~clk;
     
     //Stimulus
@@ -58,7 +58,9 @@ module TB_RingMemorySystem();
         we = 0;
         SeqData = 0;
         //hold reset for a few cycles
-        repeat(5) @(posedge clk);
+        repeat(1) @(posedge clk);
+        rst = 0;
+        //repeat(1) @(posedge clk);
         // feed 100 samples
         for(int i = 0; i < 100; i++) begin
             @(posedge clk);

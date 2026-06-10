@@ -92,6 +92,7 @@ localparam int MEMORY_REGS = 2**ADDR_WIDTH)
         end
     end
 endmodule
+
 module RotateRing
     #(parameter DATA_WIDTH = 16,
     parameter ADDR_WIDTH = 6,
@@ -107,16 +108,20 @@ module RotateRing
     output logic ParValid [0:MEMORY_REGS-1]
     );
     
-    logic [DATA_WIDTH-1:0]    RotData [0:MEMORY_REGS-1]; // send most recent at the top
-    logic RotValid [0:MEMORY_REGS-1];
-    
+    logic [DATA_WIDTH-1:0] RotData  [0:MEMORY_REGS-1]; // send most recent at the top
+    logic                  RotValid [0:MEMORY_REGS-1];
     //Rotated output
     generate
         for (genvar i = 0; i < MEMORY_REGS; i++) begin : ROTATE
-            //compute source index = (wr_ptr - 1 - i) modulo MEMORY_REGS
-            logic [ADDR_WIDTH-1:0] src = i;//wr_ptr - 1 - i;
-            assign RotData[i] = RAM[src];
-            assign RotValid[i] = VALID[src];
+            // Compute (wr_ptr - 1 - i) modulo MEMORY_REGS
+            logic [ADDR_WIDTH-1:0] src;
+
+            always_comb begin
+                src = wr_ptr - (i + 1);
+            end
+            
+            assign ParData[i]  = RAM[src];
+            assign ParValid[i] = VALID[src];
         end
     endgenerate
     
