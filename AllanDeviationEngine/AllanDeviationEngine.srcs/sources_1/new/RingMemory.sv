@@ -64,10 +64,11 @@ module RingMemorySystem
 endmodule
 
 module RingMemory
-#(parameter DATA_WIDTH = 16,
-parameter ADDR_WIDTH = 6,
-localparam int MEMORY_REGS = 2**ADDR_WIDTH)
-(
+    #(parameter DATA_WIDTH = 16,
+    parameter MEMORY_REGS= 64,
+    localparam int  ADDR_WIDTH = ceil(log(ADDR_WIDTH)/log(2))
+    )
+    (
     input logic clk, //Clock
     input logic rst, // reset Active High
     input logic we, // Write Enable
@@ -95,8 +96,9 @@ endmodule
 
 module RotateRing
     #(parameter DATA_WIDTH = 16,
-    parameter ADDR_WIDTH = 6,
-    localparam int MEMORY_REGS = 2**ADDR_WIDTH)
+    parameter MEMORY_REGS= 64,
+    localparam int  ADDR_WIDTH = ceil(log(ADDR_WIDTH)/log(2))
+    )
     (
     input logic clk, //Clock             
     input logic rst, // reset Active High
