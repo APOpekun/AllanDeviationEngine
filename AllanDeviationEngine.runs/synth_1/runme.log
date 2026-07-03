@@ -1,0 +1,930 @@
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Thu Jul  2 21:03:24 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/utils_1/imports/synth_1/AllanDeviationEngine.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/utils_1/imports/synth_1/AllanDeviationEngine.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31988
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1178.082 ; gain = 492.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'AllanDeviationEngine' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:49]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter MEMORY_REGS bound to: 64 - type: integer 
+	Parameter offset bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RingMemorySystem' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/RingMemory.sv:22]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter MEMORY_REGS bound to: 68 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RingMemory' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/RingMemory.sv:67]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter MEMORY_REGS bound to: 68 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RingMemory' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/RingMemory.sv:67]
+INFO: [Synth 8-6157] synthesizing module 'RotateRing' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/RingMemory.sv:98]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter MEMORY_REGS bound to: 68 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RegBank' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6155] done synthesizing module 'RotateRing' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/RingMemory.sv:98]
+INFO: [Synth 8-6155] done synthesizing module 'RingMemorySystem' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/RingMemory.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Differencer' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:227]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter MEMORY_REGS bound to: 68 - type: integer 
+	Parameter offset bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Differencer' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:227]
+INFO: [Synth 8-6157] synthesizing module 'Squarer' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:284]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter MEMORY_REGS bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Multiplier' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:257]
+	Parameter IN_A_WIDTH bound to: 16 - type: integer 
+	Parameter IN_B_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized0' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 33 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized0' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6155] done synthesizing module 'Multiplier' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:257]
+INFO: [Synth 8-6155] done synthesizing module 'Squarer' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'PopcountTree' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:541]
+	Parameter MEMORY_REGS bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized1' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized1' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6155] done synthesizing module 'PopcountTree' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:541]
+INFO: [Synth 8-6157] synthesizing module 'gap_detector' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:460]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000000100000 
+	Parameter MEMORY_REGS bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BufferN' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:198]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000100001 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000000110 
+INFO: [Synth 8-6155] done synthesizing module 'BufferN' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:198]
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized2' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 63 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized2' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized3' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized3' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6157] synthesizing module 'BufferN__parameterized0' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:198]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000000010 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000000101 
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized4' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized4' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6155] done synthesizing module 'BufferN__parameterized0' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:198]
+INFO: [Synth 8-6155] done synthesizing module 'gap_detector' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:460]
+INFO: [Synth 8-6157] synthesizing module 'ReciprocalLUT' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:620]
+	Parameter MEMORY_REGS bound to: 64 - type: integer 
+	Parameter OUT_WIDTH bound to: 32'sb00000000000000000000000000100110 
+WARNING: [Synth 8-4179] divide by zero is illegal [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:645]
+INFO: [Synth 8-6157] synthesizing module 'BufferN__parameterized1' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:198]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000100111 
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000000111 
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized5' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 39 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized5' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6155] done synthesizing module 'BufferN__parameterized1' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:198]
+INFO: [Synth 8-6155] done synthesizing module 'ReciprocalLUT' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:620]
+INFO: [Synth 8-6157] synthesizing module 'Streaming_Accumulator' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:316]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000000100000 
+	Parameter MEMORY_REGS bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized6' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 38 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized6' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized7' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized7' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6155] done synthesizing module 'Streaming_Accumulator' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:316]
+INFO: [Synth 8-6157] synthesizing module 'Multiplier__parameterized0' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:257]
+	Parameter IN_A_WIDTH bound to: 32'sb00000000000000000000000000100110 
+	Parameter IN_B_WIDTH bound to: 32'sb00000000000000000000000000100110 
+INFO: [Synth 8-6157] synthesizing module 'RegBank__parameterized8' [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+	Parameter WIDTH bound to: 77 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RegBank__parameterized8' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:181]
+INFO: [Synth 8-6155] done synthesizing module 'Multiplier__parameterized0' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:257]
+INFO: [Synth 8-6155] done synthesizing module 'AllanDeviationEngine' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1346.172 ; gain = 660.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1346.172 ; gain = 660.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1346.172 ; gain = 660.492
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.271 . Memory (MB): peak = 1346.172 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1417.770 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1417.770 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1417.770 ; gain = 732.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1417.770 ; gain = 732.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1417.770 ; gain = 732.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1417.770 ; gain = 732.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1417.770 ; gain = 732.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1417.770 ; gain = 732.090
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   38 Bit       Adders := 63    
+	   3 Input   16 Bit       Adders := 64    
+	   2 Input    7 Bit       Adders := 32    
+	   2 Input    2 Bit       Adders := 32    
++---Registers : 
+	               77 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               63 Bit    Registers := 2     
+	               39 Bit    Registers := 7     
+	               38 Bit    Registers := 127   
+	               33 Bit    Registers := 448   
+	               17 Bit    Registers := 132   
+	               16 Bit    Registers := 68    
+	                7 Bit    Registers := 64    
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 75    
++---Multipliers : 
+	              38x38  Multipliers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 64    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP u_Sqr/square[0].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[0].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[0].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[1].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[1].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[1].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[2].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[2].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[2].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[3].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[3].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[3].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[4].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[4].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[4].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[5].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[5].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[5].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[6].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[6].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[6].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[7].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[7].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[7].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[8].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[8].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[8].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[9].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[9].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[9].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[10].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[10].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[10].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[11].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[11].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[11].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[12].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[12].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[12].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[13].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[13].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[13].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[14].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[14].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[14].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[15].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[15].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[15].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[16].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[16].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[16].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[17].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[17].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[17].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[18].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[18].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[18].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[19].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[19].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[19].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[20].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[20].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[20].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[21].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[21].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[21].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[22].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[22].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[22].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[23].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[23].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[23].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[24].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[24].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[24].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[25].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[25].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[25].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[26].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[26].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[26].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[27].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[27].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[27].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[28].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[28].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[28].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[29].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[29].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[29].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[30].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[30].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[30].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[31].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[31].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[31].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[32].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[32].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[32].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[33].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[33].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[33].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[34].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[34].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[34].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[35].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[35].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[35].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[36].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[36].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[36].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[37].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[37].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[37].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[38].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[38].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[38].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[39].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[39].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[39].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[40].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[40].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[40].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[41].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[41].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[41].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[42].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[42].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[42].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[43].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[43].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[43].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[44].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[44].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[44].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[45].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[45].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[45].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[46].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[46].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[46].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[47].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[47].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[47].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[48].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[48].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[48].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[49].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[49].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[49].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[50].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[50].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[50].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[51].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[51].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[51].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[52].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[52].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[52].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[53].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[53].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[53].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[54].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[54].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[54].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[55].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[55].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[55].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[56].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[56].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[56].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[57].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[57].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[57].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[58].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[58].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[58].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[59].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[59].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[59].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[60].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[60].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[60].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[61].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[61].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[61].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[62].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[62].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[62].u_Multiplier/d0.
+DSP Report: Generating DSP u_Sqr/square[63].u_Multiplier/d0, operation Mode is: A*B.
+DSP Report: operator u_Sqr/square[63].u_Multiplier/d0 is absorbed into DSP u_Sqr/square[63].u_Multiplier/d0.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[0].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[1].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[2].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[3].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[4].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[5].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[6].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[7].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[8].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[9].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[10].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[11].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[12].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[13].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[14].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[15].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[16].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[17].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[18].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[19].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[20].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[21].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[22].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[23].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[24].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[25].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[26].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[27].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[28].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[29].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[30].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[31].reg_data/q_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[0].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[1].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[2].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[3].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[4].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[5].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[6].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[7].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[8].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[9].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[10].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[11].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[12].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[13].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[14].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[15].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[0].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[1].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[2].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[3].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[4].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[5].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[6].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[7].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[0].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[1].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[2].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[3].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[0].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[1].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[2].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[3].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[4].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[5].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[6].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[7].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[4].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[5].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[6].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[7].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[8].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[9].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[10].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[11].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[12].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[13].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[14].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[15].reg_data/q_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[8].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[9].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[10].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[11].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[8].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[9].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[10].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[11].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[12].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[13].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[14].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[15].reg_data/q_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[12].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[13].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[14].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[15].reg_data/q_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[16].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[17].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[18].reg_data/q_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\TREE[0].REG_STAGE[19].reg_data/q_reg[36] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 0. Recommended levels of pipeline registers is 5. [C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv:274]
+DSP Report: Generating DSP u_Multiplier/d0, operation Mode is: A*B''.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: Generating DSP u_Multiplier/d0, operation Mode is: A''*B.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: Generating DSP u_Multiplier/d0, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: Generating DSP u_Multiplier/d0, operation Mode is: A''*B.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: Generating DSP u_Multiplier/d0, operation Mode is: (PCIN>>17)+A*B''.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: register u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+DSP Report: operator u_Multiplier/d0 is absorbed into DSP u_Multiplier/d0.
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[0]' (FDR) to 'u_GapDet/ValidDataBuffer[63].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[1]' (FDR) to 'u_GapDet/ValidDataBuffer[62].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[2]' (FDR) to 'u_GapDet/ValidDataBuffer[61].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[3]' (FDR) to 'u_GapDet/ValidDataBuffer[60].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[4]' (FDR) to 'u_GapDet/ValidDataBuffer[59].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[5]' (FDR) to 'u_GapDet/ValidDataBuffer[58].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[6]' (FDR) to 'u_GapDet/ValidDataBuffer[57].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[7]' (FDR) to 'u_GapDet/ValidDataBuffer[56].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[8]' (FDR) to 'u_GapDet/ValidDataBuffer[55].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[9]' (FDR) to 'u_GapDet/ValidDataBuffer[54].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[10]' (FDR) to 'u_GapDet/ValidDataBuffer[53].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[11]' (FDR) to 'u_GapDet/ValidDataBuffer[52].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[12]' (FDR) to 'u_GapDet/ValidDataBuffer[51].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[13]' (FDR) to 'u_GapDet/ValidDataBuffer[50].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[14]' (FDR) to 'u_GapDet/ValidDataBuffer[49].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[15]' (FDR) to 'u_GapDet/ValidDataBuffer[48].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[16]' (FDR) to 'u_GapDet/ValidDataBuffer[47].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[17]' (FDR) to 'u_GapDet/ValidDataBuffer[46].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[18]' (FDR) to 'u_GapDet/ValidDataBuffer[45].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[19]' (FDR) to 'u_GapDet/ValidDataBuffer[44].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[20]' (FDR) to 'u_GapDet/ValidDataBuffer[43].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[21]' (FDR) to 'u_GapDet/ValidDataBuffer[42].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[22]' (FDR) to 'u_GapDet/ValidDataBuffer[41].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[23]' (FDR) to 'u_GapDet/ValidDataBuffer[40].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[24]' (FDR) to 'u_GapDet/ValidDataBuffer[39].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[25]' (FDR) to 'u_GapDet/ValidDataBuffer[38].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[26]' (FDR) to 'u_GapDet/ValidDataBuffer[37].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[27]' (FDR) to 'u_GapDet/ValidDataBuffer[36].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[28]' (FDR) to 'u_GapDet/ValidDataBuffer[35].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[29]' (FDR) to 'u_GapDet/ValidDataBuffer[34].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[30]' (FDR) to 'u_GapDet/ValidDataBuffer[33].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[31]' (FDR) to 'u_GapDet/ValidDataBuffer[32].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[32]' (FDR) to 'u_GapDet/ValidDataBuffer[31].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[33]' (FDR) to 'u_GapDet/ValidDataBuffer[30].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[34]' (FDR) to 'u_GapDet/ValidDataBuffer[29].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[35]' (FDR) to 'u_GapDet/ValidDataBuffer[28].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[36]' (FDR) to 'u_GapDet/ValidDataBuffer[27].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[37]' (FDR) to 'u_GapDet/ValidDataBuffer[26].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[38]' (FDR) to 'u_GapDet/ValidDataBuffer[25].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[39]' (FDR) to 'u_GapDet/ValidDataBuffer[24].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[40]' (FDR) to 'u_GapDet/ValidDataBuffer[23].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[41]' (FDR) to 'u_GapDet/ValidDataBuffer[22].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[42]' (FDR) to 'u_GapDet/ValidDataBuffer[21].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[43]' (FDR) to 'u_GapDet/ValidDataBuffer[20].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[44]' (FDR) to 'u_GapDet/ValidDataBuffer[19].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[45]' (FDR) to 'u_GapDet/ValidDataBuffer[18].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[46]' (FDR) to 'u_GapDet/ValidDataBuffer[17].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[47]' (FDR) to 'u_GapDet/ValidDataBuffer[16].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[48]' (FDR) to 'u_GapDet/ValidDataBuffer[15].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[49]' (FDR) to 'u_GapDet/ValidDataBuffer[14].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[50]' (FDR) to 'u_GapDet/ValidDataBuffer[13].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[51]' (FDR) to 'u_GapDet/ValidDataBuffer[12].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[52]' (FDR) to 'u_GapDet/ValidDataBuffer[11].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[53]' (FDR) to 'u_GapDet/ValidDataBuffer[10].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[54]' (FDR) to 'u_GapDet/ValidDataBuffer[9].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[55]' (FDR) to 'u_GapDet/ValidDataBuffer[8].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[56]' (FDR) to 'u_GapDet/ValidDataBuffer[7].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[57]' (FDR) to 'u_GapDet/ValidDataBuffer[6].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[58]' (FDR) to 'u_GapDet/ValidDataBuffer[5].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[59]' (FDR) to 'u_GapDet/ValidDataBuffer[4].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[60]' (FDR) to 'u_GapDet/ValidDataBuffer[3].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[61]' (FDR) to 'u_GapDet/ValidDataBuffer[2].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[62]' (FDR) to 'u_GapDet/ValidDataBuffer[1].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+INFO: [Synth 8-3886] merging instance 'u_GapDet/reg_inValid_vec/q_reg[63]' (FDR) to 'u_GapDet/ValidDataBuffer[0].ValidDataBuffer/PIPE[0].reg_stage/q_reg[32]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:14 . Memory (MB): peak = 1460.621 ; gain = 774.941
+---------------------------------------------------------------------------------
+ Sort Area is AllanDeviationEngine__GCB1 u_Multiplier/d0_3 : 0 0 : 3412 6835 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB1 u_Multiplier/d0_3 : 0 1 : 3423 6835 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB1 u_Multiplier/d0_0 : 0 0 : 3137 6560 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB1 u_Multiplier/d0_0 : 0 1 : 3423 6560 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[0].u_Multiplier/d0_0 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[10].u_Multiplier/d0_b : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[11].u_Multiplier/d0_c : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[12].u_Multiplier/d0_d : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[13].u_Multiplier/d0_e : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[14].u_Multiplier/d0_f : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[15].u_Multiplier/d0_10 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[16].u_Multiplier/d0_11 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[17].u_Multiplier/d0_12 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[18].u_Multiplier/d0_13 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[19].u_Multiplier/d0_14 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[1].u_Multiplier/d0_2 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[20].u_Multiplier/d0_15 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[21].u_Multiplier/d0_16 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[22].u_Multiplier/d0_17 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[23].u_Multiplier/d0_18 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[24].u_Multiplier/d0_19 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[25].u_Multiplier/d0_1a : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[26].u_Multiplier/d0_1b : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[27].u_Multiplier/d0_1c : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[28].u_Multiplier/d0_1d : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[29].u_Multiplier/d0_1e : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[2].u_Multiplier/d0_3 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[30].u_Multiplier/d0_1f : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[31].u_Multiplier/d0_20 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[32].u_Multiplier/d0_21 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[33].u_Multiplier/d0_22 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[34].u_Multiplier/d0_23 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[35].u_Multiplier/d0_24 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[36].u_Multiplier/d0_25 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[37].u_Multiplier/d0_26 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[38].u_Multiplier/d0_27 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[39].u_Multiplier/d0_28 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[3].u_Multiplier/d0_4 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[40].u_Multiplier/d0_29 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[41].u_Multiplier/d0_2a : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[42].u_Multiplier/d0_2b : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[43].u_Multiplier/d0_2c : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[44].u_Multiplier/d0_2d : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[45].u_Multiplier/d0_2e : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[46].u_Multiplier/d0_2f : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[47].u_Multiplier/d0_30 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[48].u_Multiplier/d0_31 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[49].u_Multiplier/d0_32 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[4].u_Multiplier/d0_5 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[50].u_Multiplier/d0_33 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[51].u_Multiplier/d0_34 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[52].u_Multiplier/d0_35 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[53].u_Multiplier/d0_36 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[54].u_Multiplier/d0_37 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[55].u_Multiplier/d0_38 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[56].u_Multiplier/d0_39 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[57].u_Multiplier/d0_3a : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[58].u_Multiplier/d0_3b : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[59].u_Multiplier/d0_3c : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[5].u_Multiplier/d0_6 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[60].u_Multiplier/d0_3d : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[61].u_Multiplier/d0_3e : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[62].u_Multiplier/d0_3f : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[63].u_Multiplier/d0_40 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[6].u_Multiplier/d0_7 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[7].u_Multiplier/d0_8 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[8].u_Multiplier/d0_9 : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB2 u_Sqr/square[9].u_Multiplier/d0_a : 0 0 : 1946 1946 : Used 1 time 0
+ Sort Area is AllanDeviationEngine__GCB1 u_Multiplier/d0_5 : 0 0 : 947 947 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++--------------+------------+---------------+----------------+
+|Module Name   | RTL Object | Depth x Width | Implemented As | 
++--------------+------------+---------------+----------------+
+|ReciprocalLUT | RecipTable | 128x38        | LUT            | 
++--------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | A*B              | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | A*B''            | 22     | 5      | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | A''*B            | 22     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | (PCIN>>17)+A*B'' | 22     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | A''*B            | 18     | 18     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | (PCIN>>17)+A*B'' | 22     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
++---------------------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:26 . Memory (MB): peak = 1644.797 ; gain = 959.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:27 . Memory (MB): peak = 1659.340 ; gain = 973.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:01:40 . Memory (MB): peak = 1670.844 ; gain = 985.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:49 . Memory (MB): peak = 1884.297 ; gain = 1198.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:50 . Memory (MB): peak = 1884.297 ; gain = 1198.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:51 . Memory (MB): peak = 1888.281 ; gain = 1202.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:51 . Memory (MB): peak = 1888.281 ; gain = 1202.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:31 ; elapsed = 00:01:52 . Memory (MB): peak = 1913.152 ; gain = 1227.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:31 ; elapsed = 00:01:52 . Memory (MB): peak = 1913.152 ; gain = 1227.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|main        | nolabel_line37/u_StrAcc/TREE[5].reg_valid/q_reg[0]                                     | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|main        | nolabel_line37/u_RecipLUT/Buffer/PIPE[4].reg_stage/q_reg[37]                           | 4      | 38    | YES          | NO                 | YES               | 38     | 0       | 
+|main        | nolabel_line37/u_GapDet/ValidDataBuffer[0].ValidDataBuffer/PIPE[5].reg_stage/q_reg[32] | 5      | 64    | YES          | NO                 | YES               | 64     | 0       | 
+|main        | nolabel_line37/u_GapDet/ValidDataBuffer[0].ValidDataBuffer/PIPE[5].reg_stage/q_reg[31] | 6      | 2048  | YES          | NO                 | YES               | 2048   | 0       | 
+|main        | nolabel_line37/u_GapDet/FlagBuffer/PIPE[4].reg_stage/q_reg[1]                          | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|main        | nolabel_line37/u_RecipLUT/Buffer/PIPE[6].reg_stage/q_reg[38]                           | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|AllanDeviationEngine__GCB1 | A'*B''          | 21     | 4      | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | A''*B'          | 21     | 17     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | PCIN>>17+A'*B'' | 21     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | A''*B'          | 17     | 17     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|AllanDeviationEngine__GCB1 | PCIN>>17+A'*B'' | 21     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|Multiplier                 | (A'*B')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++---------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   863|
+|3     |DSP48E1  |    69|
+|6     |LUT1     |    11|
+|7     |LUT2     |  5684|
+|8     |LUT3     |  3388|
+|9     |LUT4     |   106|
+|10    |LUT5     |   514|
+|11    |LUT6     |  4412|
+|12    |MUXF7    |   187|
+|13    |MUXF8    |    17|
+|14    |RAMB18E1 |     2|
+|16    |SRL16E   |  2154|
+|17    |FDRE     | 11413|
+|18    |IBUF     |    19|
+|19    |OBUF     |    40|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:31 ; elapsed = 00:01:52 . Memory (MB): peak = 1913.152 ; gain = 1227.473
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:23 ; elapsed = 00:01:50 . Memory (MB): peak = 1913.152 ; gain = 1155.875
+Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:01:53 . Memory (MB): peak = 1913.152 ; gain = 1227.473
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.423 . Memory (MB): peak = 1922.332 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1138 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1927.008 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: cbdae653
+INFO: [Common 17-83] Releasing license: Synthesis
+237 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:41 ; elapsed = 00:02:04 . Memory (MB): peak = 1927.008 ; gain = 1428.332
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1927.008 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.runs/synth_1/main.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jul  2 21:05:39 2026...
