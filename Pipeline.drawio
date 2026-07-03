@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" version="29.2.9">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0">
   <diagram name="Page-1" id="r8GgRu1pUFsxohcLHtm6">
-    <mxGraphModel dx="520" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1710" dy="985" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -31,19 +31,19 @@
         <mxCell id="MavBzbEf7kYCPCIZQS9f-12" edge="1" parent="1" source="MavBzbEf7kYCPCIZQS9f-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="MavBzbEf7kYCPCIZQS9f-15" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MavBzbEf7kYCPCIZQS9f-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Difference&lt;div&gt;x[n]-x[n+t]&lt;/div&gt;" vertex="1">
+        <mxCell id="MavBzbEf7kYCPCIZQS9f-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Difference&lt;div&gt;d[n]=x[n]-x[n+t]&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="100" x="530" y="20" as="geometry" />
         </mxCell>
         <mxCell id="MavBzbEf7kYCPCIZQS9f-19" edge="1" parent="1" source="MavBzbEf7kYCPCIZQS9f-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="MavBzbEf7kYCPCIZQS9f-17" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MavBzbEf7kYCPCIZQS9f-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Squarer&lt;div&gt;x[n]^2&lt;/div&gt;" vertex="1">
+        <mxCell id="MavBzbEf7kYCPCIZQS9f-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Squarer&lt;div&gt;s[n] = d[n]&lt;sup&gt;2&lt;/sup&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="100" x="670" y="20" as="geometry" />
         </mxCell>
         <mxCell id="MavBzbEf7kYCPCIZQS9f-25" edge="1" parent="1" source="MavBzbEf7kYCPCIZQS9f-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="MavBzbEf7kYCPCIZQS9f-24" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MavBzbEf7kYCPCIZQS9f-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Accumulator&lt;div&gt;Σ(x[n]) ∀n&lt;/div&gt;" vertex="1">
+        <mxCell id="MavBzbEf7kYCPCIZQS9f-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Accumulator&lt;div&gt;sum = Σ(s[n]) ∀n&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="100" x="970" y="20" as="geometry" />
         </mxCell>
         <mxCell id="MavBzbEf7kYCPCIZQS9f-20" edge="1" parent="1" source="MavBzbEf7kYCPCIZQS9f-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="MavBzbEf7kYCPCIZQS9f-16" value="">
@@ -64,11 +64,17 @@
         <mxCell id="MavBzbEf7kYCPCIZQS9f-28" edge="1" parent="1" source="MavBzbEf7kYCPCIZQS9f-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="MavBzbEf7kYCPCIZQS9f-27" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MavBzbEf7kYCPCIZQS9f-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Multiplier" vertex="1">
+        <mxCell id="MavBzbEf7kYCPCIZQS9f-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Multiplier&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;AllanVar = &lt;br&gt;sum&amp;nbsp;&lt;/span&gt;* 1/N&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="100" x="1130" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="MavBzbEf7kYCPCIZQS9f-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="" vertex="1">
+        <mxCell id="9-3OHPwZcsWv93A3LVCU-3" edge="1" parent="1" source="MavBzbEf7kYCPCIZQS9f-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="9-3OHPwZcsWv93A3LVCU-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MavBzbEf7kYCPCIZQS9f-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Return AllanVar" vertex="1">
           <mxGeometry height="100" width="100" x="1280" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9-3OHPwZcsWv93A3LVCU-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="end" vertex="1">
+          <mxGeometry height="60" width="100" x="1420" y="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
