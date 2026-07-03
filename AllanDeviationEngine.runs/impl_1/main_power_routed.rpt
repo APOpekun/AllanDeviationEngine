@@ -1,0 +1,419 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date             : Thu Jul  2 21:08:50 2026
+| Host             : apopekun_Victus running 64-bit major release  (build 9200)
+| Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
+| Design           : main
+| Device           : xc7a35tcpg236-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 456.204 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 455.718                           |
+| Device Static (W)        | 0.485                             |
+| Effective TJA (C/W)      | 5.0                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic             |   164.856 |    29873 |       --- |             --- |
+|   LUT as Logic          |   139.574 |    11226 |     20800 |           53.97 |
+|   LUT as Shift Register |    16.372 |     2136 |      9600 |           22.25 |
+|   Register              |     6.270 |    11413 |     41600 |           27.44 |
+|   CARRY4                |     2.101 |      863 |      8150 |           10.59 |
+|   F7/F8 Muxes           |     0.533 |      204 |     32600 |            0.63 |
+|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
+|   Others                |     0.000 |     1123 |       --- |             --- |
+| Signals                 |   216.557 |    20578 |       --- |             --- |
+| Block RAM               |     0.186 |        1 |        50 |            2.00 |
+| DSPs                    |    72.535 |       69 |        90 |           76.67 |
+| I/O                     |     1.584 |       59 |       106 |           55.66 |
+| Static Power            |     0.485 |          |           |                 |
+| Total                   |   456.204 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |   454.533 |     454.192 |      0.341 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.177 |       0.124 |      0.053 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.717 |       0.716 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.025 |       0.014 |      0.010 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 5.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------+-----------+
+| Name                                      | Power (W) |
++-------------------------------------------+-----------+
+| main                                      |   455.718 |
+|   nolabel_line37                          |   452.374 |
+|     u_Diff                                |    23.765 |
+|       Difference[0].regValidData          |     0.003 |
+|       Difference[10].regValidData         |     0.006 |
+|       Difference[11].regValidData         |     0.003 |
+|       Difference[12].regValidData         |     0.004 |
+|       Difference[13].regValidData         |     0.003 |
+|       Difference[14].regValidData         |     0.004 |
+|       Difference[15].regValidData         |     0.005 |
+|       Difference[16].regValidData         |     0.005 |
+|       Difference[17].regValidData         |     0.003 |
+|       Difference[18].regValidData         |     0.007 |
+|       Difference[19].regValidData         |     0.010 |
+|       Difference[1].regValidData          |     0.006 |
+|       Difference[20].regValidData         |     0.006 |
+|       Difference[21].regValidData         |     0.003 |
+|       Difference[22].regValidData         |     0.005 |
+|       Difference[23].regValidData         |     0.005 |
+|       Difference[24].regValidData         |     0.003 |
+|       Difference[25].regValidData         |     0.003 |
+|       Difference[26].regValidData         |     0.003 |
+|       Difference[27].regValidData         |     0.007 |
+|       Difference[28].regValidData         |     0.005 |
+|       Difference[29].regValidData         |     0.004 |
+|       Difference[2].regValidData          |     0.006 |
+|       Difference[30].regValidData         |     0.003 |
+|       Difference[31].regValidData         |     0.005 |
+|       Difference[32].regValidData         |     0.006 |
+|       Difference[33].regValidData         |     0.009 |
+|       Difference[34].regValidData         |     0.004 |
+|       Difference[35].regValidData         |     0.005 |
+|       Difference[36].regValidData         |     0.006 |
+|       Difference[37].regValidData         |     0.004 |
+|       Difference[38].regValidData         |     0.007 |
+|       Difference[39].regValidData         |     0.007 |
+|       Difference[3].regValidData          |     0.005 |
+|       Difference[40].regValidData         |     0.005 |
+|       Difference[41].regValidData         |     0.004 |
+|       Difference[42].regValidData         |     0.004 |
+|       Difference[43].regValidData         |     0.005 |
+|       Difference[44].regValidData         |     0.006 |
+|       Difference[45].regValidData         |     0.003 |
+|       Difference[46].regValidData         |     0.005 |
+|       Difference[47].regValidData         |     0.005 |
+|       Difference[48].regValidData         |     0.005 |
+|       Difference[49].regValidData         |     0.003 |
+|       Difference[4].regValidData          |     0.006 |
+|       Difference[50].regValidData         |     0.006 |
+|       Difference[51].regValidData         |     0.005 |
+|       Difference[52].regValidData         |     0.007 |
+|       Difference[53].regValidData         |     0.005 |
+|       Difference[54].regValidData         |     0.006 |
+|       Difference[55].regValidData         |     0.007 |
+|       Difference[56].regValidData         |     0.005 |
+|       Difference[57].regValidData         |     0.003 |
+|       Difference[58].regValidData         |     0.007 |
+|       Difference[59].regValidData         |     0.008 |
+|       Difference[5].regValidData          |     0.009 |
+|       Difference[60].regValidData         |     0.004 |
+|       Difference[61].regValidData         |     0.006 |
+|       Difference[62].regValidData         |     0.006 |
+|       Difference[63].regValidData         |     0.007 |
+|       Difference[6].regValidData          |     0.007 |
+|       Difference[7].regValidData          |     0.003 |
+|       Difference[8].regValidData          |     0.009 |
+|       Difference[9].regValidData          |     0.003 |
+|     u_GapDet                              |    58.408 |
+|       ValidDataBuffer[0].ValidDataBuffer  |     0.871 |
+|       ValidDataBuffer[10].ValidDataBuffer |     0.739 |
+|       ValidDataBuffer[11].ValidDataBuffer |     0.736 |
+|       ValidDataBuffer[12].ValidDataBuffer |     0.692 |
+|       ValidDataBuffer[13].ValidDataBuffer |     0.706 |
+|       ValidDataBuffer[14].ValidDataBuffer |     0.625 |
+|       ValidDataBuffer[15].ValidDataBuffer |     0.688 |
+|       ValidDataBuffer[16].ValidDataBuffer |     0.735 |
+|       ValidDataBuffer[17].ValidDataBuffer |     0.741 |
+|       ValidDataBuffer[18].ValidDataBuffer |     0.705 |
+|       ValidDataBuffer[19].ValidDataBuffer |     0.691 |
+|       ValidDataBuffer[1].ValidDataBuffer  |     0.724 |
+|       ValidDataBuffer[20].ValidDataBuffer |     0.786 |
+|       ValidDataBuffer[21].ValidDataBuffer |     0.719 |
+|       ValidDataBuffer[22].ValidDataBuffer |     0.685 |
+|       ValidDataBuffer[23].ValidDataBuffer |     0.720 |
+|       ValidDataBuffer[24].ValidDataBuffer |     0.710 |
+|       ValidDataBuffer[25].ValidDataBuffer |     0.661 |
+|       ValidDataBuffer[26].ValidDataBuffer |     0.675 |
+|       ValidDataBuffer[27].ValidDataBuffer |     0.656 |
+|       ValidDataBuffer[28].ValidDataBuffer |     0.631 |
+|       ValidDataBuffer[29].ValidDataBuffer |     0.677 |
+|       ValidDataBuffer[2].ValidDataBuffer  |     0.641 |
+|       ValidDataBuffer[30].ValidDataBuffer |     0.631 |
+|       ValidDataBuffer[31].ValidDataBuffer |     0.728 |
+|       ValidDataBuffer[32].ValidDataBuffer |     0.741 |
+|       ValidDataBuffer[33].ValidDataBuffer |     0.756 |
+|       ValidDataBuffer[34].ValidDataBuffer |     0.659 |
+|       ValidDataBuffer[35].ValidDataBuffer |     0.787 |
+|       ValidDataBuffer[36].ValidDataBuffer |     0.784 |
+|       ValidDataBuffer[37].ValidDataBuffer |     0.775 |
+|       ValidDataBuffer[38].ValidDataBuffer |     0.790 |
+|       ValidDataBuffer[39].ValidDataBuffer |     0.766 |
+|       ValidDataBuffer[3].ValidDataBuffer  |     0.824 |
+|       ValidDataBuffer[40].ValidDataBuffer |     0.770 |
+|       ValidDataBuffer[41].ValidDataBuffer |     0.669 |
+|       ValidDataBuffer[42].ValidDataBuffer |     0.838 |
+|       ValidDataBuffer[43].ValidDataBuffer |     0.812 |
+|       ValidDataBuffer[44].ValidDataBuffer |     0.714 |
+|       ValidDataBuffer[45].ValidDataBuffer |     0.670 |
+|       ValidDataBuffer[46].ValidDataBuffer |     0.744 |
+|       ValidDataBuffer[47].ValidDataBuffer |     0.857 |
+|       ValidDataBuffer[48].ValidDataBuffer |     0.769 |
+|       ValidDataBuffer[49].ValidDataBuffer |     0.743 |
+|       ValidDataBuffer[4].ValidDataBuffer  |     0.738 |
+|       ValidDataBuffer[50].ValidDataBuffer |     0.721 |
+|       ValidDataBuffer[51].ValidDataBuffer |     0.761 |
+|       ValidDataBuffer[52].ValidDataBuffer |     0.740 |
+|       ValidDataBuffer[53].ValidDataBuffer |     0.735 |
+|       ValidDataBuffer[54].ValidDataBuffer |     0.773 |
+|       ValidDataBuffer[55].ValidDataBuffer |     0.731 |
+|       ValidDataBuffer[56].ValidDataBuffer |     0.660 |
+|       ValidDataBuffer[57].ValidDataBuffer |     0.742 |
+|       ValidDataBuffer[58].ValidDataBuffer |     0.690 |
+|       ValidDataBuffer[59].ValidDataBuffer |     0.677 |
+|       ValidDataBuffer[5].ValidDataBuffer  |     0.722 |
+|       ValidDataBuffer[60].ValidDataBuffer |     0.753 |
+|       ValidDataBuffer[61].ValidDataBuffer |     0.822 |
+|       ValidDataBuffer[62].ValidDataBuffer |     0.727 |
+|       ValidDataBuffer[63].ValidDataBuffer |     0.718 |
+|       ValidDataBuffer[6].ValidDataBuffer  |     0.687 |
+|       ValidDataBuffer[7].ValidDataBuffer  |     0.730 |
+|       ValidDataBuffer[8].ValidDataBuffer  |     0.739 |
+|       ValidDataBuffer[9].ValidDataBuffer  |     0.737 |
+|       reg_01vec                           |     0.394 |
+|       reg_10vec                           |     0.382 |
+|     u_Multiplier                          |     0.250 |
+|       reg_out                             |     0.035 |
+|     u_RecipLUT                            |     1.175 |
+|       Buffer                              |     1.148 |
+|     u_RingMemSys                          |   267.856 |
+|       u_ring                              |   235.248 |
+|       u_rotate                            |    32.608 |
+|     u_Sqr                                 |    89.535 |
+|       square[0].u_Multiplier              |     1.640 |
+|       square[10].u_Multiplier             |     1.430 |
+|       square[11].u_Multiplier             |     1.308 |
+|       square[12].u_Multiplier             |     1.350 |
+|       square[13].u_Multiplier             |     1.340 |
+|       square[14].u_Multiplier             |     1.313 |
+|       square[15].u_Multiplier             |     1.373 |
+|       square[16].u_Multiplier             |     1.388 |
+|       square[17].u_Multiplier             |     1.353 |
+|       square[18].u_Multiplier             |     1.325 |
+|       square[19].u_Multiplier             |     1.349 |
+|       square[1].u_Multiplier              |     1.335 |
+|       square[20].u_Multiplier             |     1.471 |
+|       square[21].u_Multiplier             |     1.496 |
+|       square[22].u_Multiplier             |     1.411 |
+|       square[23].u_Multiplier             |     1.403 |
+|       square[24].u_Multiplier             |     1.461 |
+|       square[25].u_Multiplier             |     1.355 |
+|       square[26].u_Multiplier             |     1.300 |
+|       square[27].u_Multiplier             |     1.335 |
+|       square[28].u_Multiplier             |     1.436 |
+|       square[29].u_Multiplier             |     1.409 |
+|       square[2].u_Multiplier              |     1.317 |
+|       square[30].u_Multiplier             |     1.455 |
+|       square[31].u_Multiplier             |     1.434 |
+|       square[32].u_Multiplier             |     1.434 |
+|       square[33].u_Multiplier             |     1.430 |
+|       square[34].u_Multiplier             |     1.456 |
+|       square[35].u_Multiplier             |     1.411 |
+|       square[36].u_Multiplier             |     1.371 |
+|       square[37].u_Multiplier             |     1.342 |
+|       square[38].u_Multiplier             |     1.767 |
+|       square[39].u_Multiplier             |     1.400 |
+|       square[3].u_Multiplier              |     1.554 |
+|       square[40].u_Multiplier             |     1.380 |
+|       square[41].u_Multiplier             |     1.349 |
+|       square[42].u_Multiplier             |     1.469 |
+|       square[43].u_Multiplier             |     1.431 |
+|       square[44].u_Multiplier             |     1.434 |
+|       square[45].u_Multiplier             |     1.390 |
+|       square[46].u_Multiplier             |     1.372 |
+|       square[47].u_Multiplier             |     1.390 |
+|       square[48].u_Multiplier             |     1.324 |
+|       square[49].u_Multiplier             |     1.319 |
+|       square[4].u_Multiplier              |     1.501 |
+|       square[50].u_Multiplier             |     1.346 |
+|       square[51].u_Multiplier             |     1.324 |
+|       square[52].u_Multiplier             |     1.394 |
+|       square[53].u_Multiplier             |     1.375 |
+|       square[54].u_Multiplier             |     1.363 |
+|       square[55].u_Multiplier             |     1.343 |
+|       square[56].u_Multiplier             |     1.573 |
+|       square[57].u_Multiplier             |     1.559 |
+|       square[58].u_Multiplier             |     1.324 |
+|       square[59].u_Multiplier             |     1.316 |
+|       square[5].u_Multiplier              |     1.524 |
+|       square[60].u_Multiplier             |     1.381 |
+|       square[61].u_Multiplier             |     1.439 |
+|       square[62].u_Multiplier             |     1.309 |
+|       square[63].u_Multiplier             |     1.309 |
+|       square[6].u_Multiplier              |     1.319 |
+|       square[7].u_Multiplier              |     1.335 |
+|       square[8].u_Multiplier              |     1.353 |
+|       square[9].u_Multiplier              |     1.337 |
+|     u_StrAcc                              |     8.943 |
+|       TREE[4].REG_STAGE[0].reg_data       |     0.002 |
+|     u_ValidCounter                        |     2.442 |
+|       TREE[0].REG_STAGE[0].reg_data       |     0.007 |
+|       TREE[0].REG_STAGE[10].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[11].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[12].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[13].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[14].reg_data      |     0.005 |
+|       TREE[0].REG_STAGE[15].reg_data      |     0.005 |
+|       TREE[0].REG_STAGE[16].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[17].reg_data      |     0.008 |
+|       TREE[0].REG_STAGE[18].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[19].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[1].reg_data       |     0.007 |
+|       TREE[0].REG_STAGE[20].reg_data      |     0.008 |
+|       TREE[0].REG_STAGE[21].reg_data      |     0.005 |
+|       TREE[0].REG_STAGE[22].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[23].reg_data      |     0.005 |
+|       TREE[0].REG_STAGE[24].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[25].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[26].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[27].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[28].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[29].reg_data      |     0.008 |
+|       TREE[0].REG_STAGE[2].reg_data       |     0.007 |
+|       TREE[0].REG_STAGE[30].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[31].reg_data      |     0.007 |
+|       TREE[0].REG_STAGE[3].reg_data       |     0.007 |
+|       TREE[0].REG_STAGE[4].reg_data       |     0.007 |
+|       TREE[0].REG_STAGE[5].reg_data       |     0.007 |
+|       TREE[0].REG_STAGE[6].reg_data       |     0.008 |
+|       TREE[0].REG_STAGE[7].reg_data       |     0.005 |
+|       TREE[0].REG_STAGE[8].reg_data       |     0.007 |
+|       TREE[0].REG_STAGE[9].reg_data       |     0.007 |
+|       TREE[1].REG_STAGE[0].reg_data       |     0.011 |
+|       TREE[1].REG_STAGE[10].reg_data      |     0.017 |
+|       TREE[1].REG_STAGE[11].reg_data      |     0.014 |
+|       TREE[1].REG_STAGE[12].reg_data      |     0.013 |
+|       TREE[1].REG_STAGE[13].reg_data      |     0.007 |
+|       TREE[1].REG_STAGE[14].reg_data      |     0.015 |
+|       TREE[1].REG_STAGE[15].reg_data      |     0.011 |
+|       TREE[1].REG_STAGE[1].reg_data       |     0.007 |
+|       TREE[1].REG_STAGE[2].reg_data       |     0.013 |
+|       TREE[1].REG_STAGE[3].reg_data       |     0.010 |
+|       TREE[1].REG_STAGE[4].reg_data       |     0.012 |
+|       TREE[1].REG_STAGE[5].reg_data       |     0.009 |
+|       TREE[1].REG_STAGE[6].reg_data       |     0.014 |
+|       TREE[1].REG_STAGE[7].reg_data       |     0.009 |
+|       TREE[1].REG_STAGE[8].reg_data       |     0.011 |
+|       TREE[1].REG_STAGE[9].reg_data       |     0.011 |
+|       TREE[2].REG_STAGE[0].reg_data       |     0.023 |
+|       TREE[2].REG_STAGE[1].reg_data       |     0.016 |
+|       TREE[2].REG_STAGE[2].reg_data       |     0.024 |
+|       TREE[2].REG_STAGE[3].reg_data       |     0.014 |
+|       TREE[2].REG_STAGE[4].reg_data       |     0.025 |
+|       TREE[2].REG_STAGE[5].reg_data       |     0.015 |
+|       TREE[2].REG_STAGE[6].reg_data       |     0.026 |
+|       TREE[2].REG_STAGE[7].reg_data       |     0.014 |
+|       TREE[3].REG_STAGE[0].reg_data       |     0.028 |
+|       TREE[3].REG_STAGE[1].reg_data       |     0.015 |
+|       TREE[3].REG_STAGE[2].reg_data       |     0.037 |
+|       TREE[3].REG_STAGE[3].reg_data       |     0.021 |
+|       TREE[4].REG_STAGE[0].reg_data       |     0.080 |
+|       TREE[4].REG_STAGE[1].reg_data       |     0.035 |
+|       TREE[5].REG_STAGE[0].reg_data       |     0.511 |
++-------------------------------------------+-----------+
+
+
