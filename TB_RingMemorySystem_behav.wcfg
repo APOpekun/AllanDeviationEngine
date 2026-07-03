@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_RingMemorySystem_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_RingMemorySystem" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="836.680 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,447.181 ns"></ZoomEndTime>
+      <Cursor1Time time="1,060.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="278"></NameColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/TB_RingMemorySystem/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/we" type="logic">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/SeqData" type="array">
+      <obj_property name="ElementShortName">SeqData[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SeqData[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider3538">
+      <obj_property name="label">RingMemory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/u_ringMemSys/u_ring/wr_ptr" type="array">
+      <obj_property name="ElementShortName">wr_ptr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_ptr[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/u_ringMemSys/u_ring/RAM" type="array">
+      <obj_property name="ElementShortName">RAM[0:63][15:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM[0:63][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/u_ringMemSys/u_ring/VALID" type="array">
+      <obj_property name="ElementShortName">VALID[0:63]</obj_property>
+      <obj_property name="ObjectShortName">VALID[0:63]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider3540">
+      <obj_property name="label">RotateRing</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/outData" type="array">
+      <obj_property name="ElementShortName">outData[0:63][15:0]</obj_property>
+      <obj_property name="ObjectShortName">outData[0:63][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/outValid" type="array">
+      <obj_property name="ElementShortName">outValid[0:63]</obj_property>
+      <obj_property name="ObjectShortName">outValid[0:63]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_RingMemorySystem/MEMORY_REGS" type="array">
+      <obj_property name="ElementShortName">MEMORY_REGS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMORY_REGS[31:0]</obj_property>
+   </wvobject>
+</wave_config>

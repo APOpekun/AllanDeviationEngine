@@ -1,0 +1,9 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.sim/sim_1/behav/xsim/glbl.v,1781564147,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sim_1/new/TB_ReciprocalLUT.sv,1783030775,systemVerilog,,,,TB_ReciprocalLUT,,uvm,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sim_1/new/TB_RingMemorySystem.sv,1782927979,systemVerilog,,C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sim_1/new/TB_ReciprocalLUT.sv,,TB_RingMemorySystem,,uvm,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv,1783033616,systemVerilog,,C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sim_1/new/TB_RingMemorySystem.sv,,AllanDeviationEngine;BufferN;Differencer;Multiplier;PopcountTree;ReciprocalLUT;RegBank;Squarer;Streaming_Accumulator;gap_detector,,uvm,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/RingMemory.sv,1782927911,systemVerilog,,C:/Users/apope/Documents/VivadoProjects/AllanDeviationEngine/AllanDeviationEngine.srcs/sources_1/new/AllanEngineSystem.sv,,RingMemory;RingMemorySystem;RotateRing,,uvm,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
